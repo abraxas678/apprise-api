@@ -17,7 +17,7 @@ ENV APPRISE_PLUGIN_PATHS /plugin
 # Install nginx and supervisord
 RUN apt-get update -qq && \
     apt-get install -y -qq nginx supervisor build-essential libffi-dev libssl-dev \
-    pkg-config rustc
+    pkg-config python3-dev rustc
 
 # Install requirements and gunicorn
 COPY ./requirements.txt /etc/requirements.txt
